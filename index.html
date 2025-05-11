@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Will You Be My Better Half?</title>
+    <title>Will You Be My Girlfriend Again?</title>
     <style>
         * {
             margin: 0;
@@ -13,104 +13,124 @@
 
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #1e1e2f;
-            color: white;
+            background: linear-gradient(to right, #f3e5f5, #e1bee7);
+            color: #5e35b1;
             text-align: center;
-            padding: 40px 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #2c3e50;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            max-width: 700px;
+            width: 100%;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
         }
 
         header {
-            background-color: royalblue;
-            padding: 30px;
-            border-radius: 10px;
+            background-color: #5e35b1;
+            padding: 20px;
+            color: white;
+            border-radius: 8px;
         }
 
         h1 {
-            font-size: 3em;
-            color: white;
+            font-size: 2.5em;
+            margin: 0;
         }
 
         .intro {
-            font-size: 1.3em;
-            margin-top: 10px;
-            color: #ddd;
+            margin-top: 15px;
+            font-size: 1.2em;
+            color: #7b1fa2;
         }
 
         .apology p {
             font-size: 1.2em;
             margin: 20px 0;
             font-weight: 300;
-            color: #ccc;
+            color: #7b1fa2;
         }
 
         .proposal-text {
-            font-size: 1.5em;
+            font-size: 1.3em;
             font-weight: bold;
             margin: 20px 0;
-            color: white;
+            color: #5e35b1;
         }
 
         button {
-            background-color: royalblue;
+            background-color: #5e35b1;
             color: white;
-            padding: 15px 30px;
-            font-size: 1.2em;
+            padding: 15px 40px;
+            font-size: 1.1em;
             border: none;
             border-radius: 5px;
             cursor: pointer;
             margin-top: 20px;
+            transition: background-color 0.3s ease;
         }
 
         button:hover {
-            background-color: #003366;
+            background-color: #311b92;
+        }
+
+        footer {
+            margin-top: 30px;
+            font-size: 1.1em;
+            color: #7b1fa2;
         }
 
         .cat-img {
-            width: 120px;
-            height: 120px;
+            width: 100px;
+            height: 100px;
             border-radius: 50%;
             margin: 20px 0;
             object-fit: cover;
         }
 
-        footer {
-            margin-top: 40px;
-            font-size: 1.1em;
-            color: #ddd;
+        /* Music player styles */
+        audio {
+            display: none;
         }
     </style>
 </head>
 <body>
+
+    <!-- Background Music -->
+    <audio autoplay loop>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
     <div class="container">
         <header>
-            <h1>My Love, [Her Name]</h1>
-            <p class="intro">I’ve been thinking about us... our journey, our moments, and how much you mean to me.</p>
+            <h1>Will You Be My Girlfriend Again?</h1>
+            <p class="intro">Like these adorable cats, we belong together. I miss you and want to restart our journey.</p>
         </header>
-        
+
         <section class="apology">
-            <p>I know we've had our arguments and tough moments. I’ve made mistakes, and I want to apologize for my habits and for not always being the best version of myself. But what I’ve learned is that my love for you is stronger than anything else, and I want to be the partner you deserve.</p>
+            <p>I want to sincerely apologize for my bad habits and the arguments we've had. I've learned from my mistakes and promise to be more understanding, patient, and considerate. You deserve the best version of me, and I’m committed to being that person every day.</p>
         </section>
-        
+
         <section class="proposal">
-            <p class="proposal-text">Will you be my better half once again? Will you allow me the chance to make things right and build a beautiful future together? I promise to cherish you, grow with you, and love you always.</p>
+            <p class="proposal-text">Will you give us another chance? I promise to cherish you and grow with you, and always love you deeply.</p>
             <div class="cat">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/Black_cat.jpg" alt="Cute cat" class="cat-img">
             </div>
-            <button onclick="window.location.href='mailto:[Her Email]'">Say Yes!</button>
+            <button onclick="window.location.href='mailto:[Her Email]'">Yes! 💖</button>
         </section>
-        
+
         <footer>
             <p>Forever yours, [Your Name]</p>
         </footer>
     </div>
+
 </body>
 </html>
