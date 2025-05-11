@@ -1,241 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
-<title>A Special Proposal</title>
-<style>
-  /* Reset & base */
-  * {
-    margin: 0; padding: 0; box-sizing: border-box;
-  }
-  body, html {
-    height: 100%;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #2c3e50, #34495e);
-    color: #d6dce1;
-    overflow-x: hidden;
-    scroll-behavior: smooth;
-  }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Better Half?</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-  /* Container */
-  .container {
-    max-width: 350px;
-    height: 600px;
-    margin: 40px auto 40px auto;
-    padding: 20px;
-    overflow-y: scroll;
-    background: linear-gradient(145deg, #1f2a38, #283645);
-    border-radius: 20px;
-    box-shadow:
-      5px 5px 15px #1b2530,
-      -5px -5px 15px #34495e;
-    position: relative;
-  }
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #1e1e2f;
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+        }
 
-  /* Scrollbar styling */
-  .container::-webkit-scrollbar {
-    width: 8px;
-  }
-  .container::-webkit-scrollbar-track {
-    background: #1f2a38;
-    border-radius: 10px;
-  }
-  .container::-webkit-scrollbar-thumb {
-    background: #2e447a;
-    border-radius: 10px;
-  }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #2c3e50;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
 
-  /* Envelope styles */
-  .envelope {
-    width: 280px;
-    height: 180px;
-    background: linear-gradient(145deg, #4a69ad, #2a3e7a);
-    margin: 40px auto 0 auto;
-    border-radius: 20px 20px 10px 10px;
-    box-shadow:
-      inset 0px 5px 7px rgba(255,255,255,0.12),
-      0 6px 10px rgba(0,0,0,0.5);
-    position: relative;
-    /* Remove pointer cursor */
-    cursor: default;
-    perspective: 900px;
-  }
+        header {
+            background-color: royalblue;
+            padding: 30px;
+            border-radius: 10px;
+        }
 
-  /* Envelope flap */
-  .envelope-flap {
-    width: 280px;
-    height: 80px;
-    background: linear-gradient(145deg, #2a3e7a, #4a69ad);
-    position: absolute;
-    top: 0;
-    left: 0;
-    border-radius: 20px 20px 0 0;
-    box-shadow: inset 0 2px 6px rgba(255,255,255,0.25);
-    transform-origin: bottom center;
-    transition: transform 1s ease;
-    z-index: 5;
-  }
-  /* Envelope bottom */
-  .envelope-bottom {
-    width: 280px;
-    height: 100px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    border-radius: 0 0 20px 20px;
-    background: linear-gradient(145deg, #344f94, #224078);
-    box-shadow: inset 0 5px 8px rgba(0,0,0,0.6);
-  }
+        h1 {
+            font-size: 3em;
+            color: white;
+        }
 
-  /* Letter style */
-  .letter {
-    position: absolute;
-    width: 260px;
-    height: 180px;
-    background: #e1e9f6;
-    border-radius: 15px;
-    top: 20px;
-    left: 10px;
-    box-shadow:
-      3px 3px 10px rgba(0,0,0,0.15),
-      inset 0 0 15px rgba(255,255,255,0.9);
-    padding: 20px 25px;
-    font-family: 'Georgia', serif;
-    font-size: 1.1rem;
-    line-height: 1.5;
-    color: #203864;
-    opacity: 0;
-    transform: translateY(100%);
-    transition: opacity 1.2s ease, transform 1.2s ease;
-    overflow-y: auto;
-  }
+        .intro {
+            font-size: 1.3em;
+            margin-top: 10px;
+            color: #ddd;
+        }
 
-  .letter::-webkit-scrollbar {
-    width: 6px;
-  }
-  .letter::-webkit-scrollbar-track {
-    background: #dbe4f7;
-    border-radius: 8px;
-  }
-  .letter::-webkit-scrollbar-thumb {
-    background: #2e447a;
-    border-radius: 8px;
-  }
+        .apology p {
+            font-size: 1.2em;
+            margin: 20px 0;
+            font-weight: 300;
+            color: #ccc;
+        }
 
-  /* Show letter and flap open states */
-  .envelope.open .envelope-flap {
-    transform: rotateX(-140deg);
-  }
-  .envelope.open .letter {
-    opacity: 1;
-    transform: translateY(0);
-  }
+        .proposal-text {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin: 20px 0;
+            color: white;
+        }
 
-  /* Header text */
-  h1 {
-    text-align: center;
-    font-weight: 700;
-    margin-top: 15px;
-    margin-bottom: 10px;
-    color: #d6dce1;
-    text-shadow:
-      1px 1px 3px #15243b,
-      0 0 9px #254a96;
-  }
+        button {
+            background-color: royalblue;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
 
-  h2 {
-    text-align: center;
-    font-weight: 400;
-    color: #a9b4cc;
-    margin-bottom: 30px;
-  }
+        button:hover {
+            background-color: #003366;
+        }
 
-  /* Button style */
-  .btn-respond {
-    display: block;
-    margin: 30px auto 40px auto;
-    background: #2a3e7a;
-    color: #e1e9f6;
-    border: none;
-    border-radius: 30px;
-    padding: 14px 40px;
-    font-size: 1.2rem;
-    font-weight: 600;
-    box-shadow: 0 5px 15px #1b2a55;
-    cursor: pointer;
-    transition: background 0.35s ease;
-    user-select: none;
-    text-align: center;
-    text-decoration: none;
-  }
-  .btn-respond:hover, .btn-respond:focus {
-    background: #415ea8;
-    outline: none;
-  }
+        .cat-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin: 20px 0;
+            object-fit: cover;
+        }
 
-  /* Footer invitation message */
-  .footer-msg {
-    text-align: center;
-    font-style: italic;
-    color: #8ca0c9;
-    margin-bottom: 20px;
-    font-size: 1rem;
-  }
-</style>
+        footer {
+            margin-top: 40px;
+            font-size: 1.1em;
+            color: #ddd;
+        }
+    </style>
 </head>
 <body>
-  <div class="container" id="scroll-container" aria-label="Proposal letter container" tabindex="0">
-    <h1>For My Love</h1>
-    <h2>Let's Begin Again Together</h2>
-
-    <div class="envelope" id="envelope" aria-label="Envelope with proposal letter" role="img" tabindex="-1">
-      <div class="envelope-flap"></div>
-      <div class="envelope-bottom"></div>
-      <article class="letter" id="letter" aria-live="polite" aria-atomic="true" aria-relevant="all" tabindex="-1">
-        <p>My Dearest,</p>
-
-        <p>We've shared so many beautiful moments in these three months, but like all true love stories, ours has faced a challenge.</p>
-
-        <p>I want you to know that every moment apart felt like a silence I couldn't bear. My heart is yours to hold, and I am ready to pour love, trust, and joy into us anew.</p>
-
-        <p>This letter is my promise to you: to listen more deeply, to cherish every smile, and to build something true and lasting.</p>
-
-        <p>Will you restart this journey with me? Together, we can write the most beautiful chapter of our lives.</p>
-
-        <p>With all my love,</p>
-        <p><strong>Your [Nickname]</strong></p>
-      </article>
+    <div class="container">
+        <header>
+            <h1>My Love, [Her Name]</h1>
+            <p class="intro">I’ve been thinking about us... our journey, our moments, and how much you mean to me.</p>
+        </header>
+        
+        <section class="apology">
+            <p>I know we've had our arguments and tough moments. I’ve made mistakes, and I want to apologize for my habits and for not always being the best version of myself. But what I’ve learned is that my love for you is stronger than anything else, and I want to be the partner you deserve.</p>
+        </section>
+        
+        <section class="proposal">
+            <p class="proposal-text">Will you be my better half once again? Will you allow me the chance to make things right and build a beautiful future together? I promise to cherish you, grow with you, and love you always.</p>
+            <div class="cat">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/Black_cat.jpg" alt="Cute cat" class="cat-img">
+            </div>
+            <button onclick="window.location.href='mailto:[Her Email]'">Say Yes!</button>
+        </section>
+        
+        <footer>
+            <p>Forever yours, [Your Name]</p>
+        </footer>
     </div>
-
-    <a href="javascript:void(0)" role="button" aria-label="Accept proposal button" class="btn-respond" id="respondBtn">Yes, I will restart with you ❤️</a>
-
-    <p class="footer-msg">Scroll gently down to see my message...</p>
-  </div>
-
-<script>
-  (function() {
-    const container = document.getElementById('scroll-container');
-    const envelope = document.getElementById('envelope');
-  
-    // Scroll event - toggle envelope open based on scroll position
-    function handleScroll() {
-      // If user scrolled down at least 30px inside container, open envelope
-      if (container.scrollTop > 30) {
-        envelope.classList.add('open');
-      } else {
-        envelope.classList.remove('open');
-      }
-    }
-
-    // Respond button listener (for demonstration, just an alert)
-    document.getElementById('respondBtn').addEventListener('click', () => {
-      alert('Thank you for accepting to restart! This means the world to me ❤️');
-    });
-
-    container.addEventListener('scroll', handleScroll);
-  })();
-</script>
 </body>
 </html>
-
